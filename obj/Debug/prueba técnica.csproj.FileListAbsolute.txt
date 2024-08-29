@@ -1,0 +1,15 @@
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\bin\Debug\prueba técnica.exe.config
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\bin\Debug\prueba técnica.exe
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\bin\Debug\prueba técnica.pdb
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\obj\Debug\prueba técnica.csproj.AssemblyReference.cache
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\obj\Debug\prueba técnica.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\obj\Debug\prueba técnica.exe
+C:\Users\USER\OneDrive - misena.edu.co\Escritorio\prueba técnica\obj\Debug\prueba técnica.pdb
+D:\Neider osea yo =D\prueba técnica\bin\Debug\prueba técnica.exe.config
+D:\Neider osea yo =D\prueba técnica\bin\Debug\prueba técnica.exe
+D:\Neider osea yo =D\prueba técnica\bin\Debug\prueba técnica.pdb
+D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.csproj.AssemblyReference.cache
+D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.csproj.SuggestedBindingRedirects.cache
+D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.csproj.CoreCompileInputs.cache
+D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.exe
+D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.pdb
