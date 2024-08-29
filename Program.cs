@@ -4,6 +4,7 @@ public class Tarea
 {
     public int id { get; set; }
     public string nombre { get; set; }
+    public string descripcion { get; set; }
     public bool estado { get; set; }
     //public DateTime fecha { get; set; }
 }
@@ -18,12 +19,15 @@ internal class Program
         int nid = tareas.Count + 1;
         Console.Write("Ingrese el nombre de la tarea: ");
         string nnombre = Console.ReadLine();
+        Console.Write("Ingrese la descripción de la tarea: ");
+        string desc = Console.ReadLine();
 
         //crea un esquema para la nuava tarea y darle sus propiedades
         Tarea nuevaTarea = new Tarea
         {
             id = nid,
             nombre = nnombre,
+            descripcion = desc,
             estado = false // El estado por defecto es false (pendiente)
         };
 
@@ -39,13 +43,13 @@ internal class Program
             return;
         }
         Console.WriteLine("Lista de Tareas:");
-        Console.WriteLine("ID -  Nombre  - Estado");
+        Console.WriteLine("ID -  Nombre  - Estado - Descripción");
         Console.WriteLine("----------------------");
         foreach (var tarea in tareas)
         {
             //aqui se cambia el true y false por completado y pendiente
             string nombreEstado = tarea.estado ? "Completado" : "Pendiente";
-            Console.WriteLine(tarea.id + " - " + tarea.nombre + " - " + nombreEstado);
+            Console.WriteLine(tarea.id + " - " + tarea.nombre + " - " + nombreEstado + " - " + tarea.descripcion);
         }
         Console.WriteLine("\n");
     }

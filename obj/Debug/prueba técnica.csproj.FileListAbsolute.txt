@@ -13,3 +13,11 @@ D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.csproj.SuggestedB
 D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.csproj.CoreCompileInputs.cache
 D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.exe
 D:\Neider osea yo =D\prueba técnica\obj\Debug\prueba técnica.pdb
+C:\Users\Sena\source\repos\Prueba_Tecnica\bin\Debug\prueba técnica.exe.config
+C:\Users\Sena\source\repos\Prueba_Tecnica\bin\Debug\prueba técnica.exe
+C:\Users\Sena\source\repos\Prueba_Tecnica\bin\Debug\prueba técnica.pdb
+C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.AssemblyReference.cache
+C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.SuggestedBindingRedirects.cache
+C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.CoreCompileInputs.cache
+C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.exe
+C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.pdb
