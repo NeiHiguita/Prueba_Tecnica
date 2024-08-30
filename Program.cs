@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 public class Tarea
 {
     public int id { get; set; }
     public string nombre { get; set; }
     public string descripcion { get; set; }
     public bool estado { get; set; }
-    //public DateTime fecha { get; set; }
+    //no la use la fecha limite con alguna funcion extra ni con el tipo de dato DateTime
+    public string fechalimite { get; set; }
 }
 internal class Program
 {
@@ -21,6 +23,8 @@ internal class Program
         string nnombre = Console.ReadLine();
         Console.Write("Ingrese la descripción de la tarea: ");
         string desc = Console.ReadLine();
+        Console.Write("Ingrese la fecha limite de la tarea (dia/mes/año): ");
+        string fecha = Console.ReadLine();
 
         //crea un esquema para la nuava tarea y darle sus propiedades
         Tarea nuevaTarea = new Tarea
@@ -28,7 +32,8 @@ internal class Program
             id = nid,
             nombre = nnombre,
             descripcion = desc,
-            estado = false // El estado por defecto es false (pendiente)
+            estado = false, // El estado por defecto es false (pendiente)
+            fechalimite = fecha
         };
 
         tareas.Add(nuevaTarea);
@@ -43,13 +48,13 @@ internal class Program
             return;
         }
         Console.WriteLine("Lista de Tareas:");
-        Console.WriteLine("ID -  Nombre  - Estado - Descripción");
-        Console.WriteLine("----------------------");
+        Console.WriteLine("ID -  Nombre  - Estado - Descripción - Fecha Limite");
+        Console.WriteLine("---------------------------------------------------");
         foreach (var tarea in tareas)
         {
             //aqui se cambia el true y false por completado y pendiente
             string nombreEstado = tarea.estado ? "Completado" : "Pendiente";
-            Console.WriteLine(tarea.id + " - " + tarea.nombre + " - " + nombreEstado + " - " + tarea.descripcion);
+            Console.WriteLine(tarea.id + " - " + tarea.nombre + " - " + nombreEstado + " - " + tarea.descripcion + " - " + tarea.fechalimite);
         }
         Console.WriteLine("\n");
     }
@@ -89,70 +94,78 @@ internal class Program
     }
     static void Main(string[] args)
     {
-        int op;
-        do
+        // manejo el try catch por si resulta algun error a la hora de digitar la opcion, por ejemplo al ingresar caracteres alfabeticos y/o caracteres especiales
+        try
         {
-            //esquema o menu para las opciones a realizar, se puede usar tambien un switch, aunque decidi usar condicionales if, else if y else
+            int op;
             Console.WriteLine("Bienvenido a la aplicación de gestión de tareas\n");
-            Console.WriteLine("Elija la opcion que desea ejecutar");
-            Console.WriteLine("1. Agregar tarea");
-            Console.WriteLine("2. Listar tareas");
-            Console.WriteLine("3. Marcar tarea como completada");
-            Console.WriteLine("4. Eliminar tarea");
-            Console.WriteLine("0. Salir");
+            do
+            {
+                //esquema o menu para las opciones a realizar, se puede usar tambien un switch, aunque decidi usar condicionales if, else if y else
+                Console.WriteLine("Elija la opcion que desea ejecutar");
+                Console.WriteLine("1. Agregar tarea");
+                Console.WriteLine("2. Listar tareas");
+                Console.WriteLine("3. Marcar tarea como completada");
+                Console.WriteLine("4. Eliminar tarea");
+                Console.WriteLine("0. Salir");
 
-            op = int.Parse(Console.ReadLine());
+                op = int.Parse(Console.ReadLine());
 
-            if (op == 1)
-            {
-                //llamar el metodo para crear
-                AgregarTarea();
-            }
-            else if (op == 2)
-            {
-                //llamar el metodo para listar
-                ListarTareas();
-            }
-            else if (op == 3)
-            {
-                Console.WriteLine("Cambiar el estado de la tarea tarea");
-                ListarTareas();
-                Console.Write("Ingrese el ID de la tarea que ha completado: ");
-                if (int.TryParse(Console.ReadLine(), out int id))
+                if (op == 1)
                 {
-                    //llamar el metodo para completar las tareas
-                    MarcarTarea(id);
+                    //llamar el metodo para crear
+                    AgregarTarea();
+                }
+                else if (op == 2)
+                {
+                    //llamar el metodo para listar
+                    ListarTareas();
+                }
+                else if (op == 3)
+                {
+                    Console.WriteLine("Cambiar el estado de la tarea tarea");
+                    ListarTareas();
+                    Console.Write("Ingrese el ID de la tarea que ha completado: ");
+                    if (int.TryParse(Console.ReadLine(), out int id))
+                    {
+                        //llamar el metodo para completar las tareas
+                        MarcarTarea(id);
+                    }
+                    else
+                    {
+                        Console.WriteLine("ID no válido");
+                    }
+                }
+                else if (op == 4)
+                {
+                    Console.WriteLine("Eliminar tarea");
+                    ListarTareas();
+                    Console.Write("Ingrese el ID de la tarea a eliminar: ");
+                    if (int.TryParse(Console.ReadLine(), out int id))
+                    {
+                        //llamar el metodo para eliminar tareas
+                        EliminarTarea(id);
+                    }
+                    else
+                    {
+                        Console.WriteLine("ID no válido");
+                    }
+                }
+                else if (op == 0)
+                {
+                    //el bucle sigue infinitamente a menos de que elija la ocion 0 = salir
+                    Console.WriteLine("Saliendo...");
                 }
                 else
                 {
-                    Console.WriteLine("ID no válido");
+                    //si se digita un valor numerico diferente al del menu seguira en el bucle
+                    Console.WriteLine("Opcion no valida");
                 }
-            }
-            else if (op == 4)
-            {
-                Console.WriteLine("Eliminar tarea");
-                ListarTareas();
-                Console.Write("Ingrese el ID de la tarea a eliminar: ");
-                if (int.TryParse(Console.ReadLine(), out int id))
-                {
-                    //llamar el metodo para eliminar tareas
-                    EliminarTarea(id);
-                }
-                else
-                {
-                    Console.WriteLine("ID no válido");
-                }
-            }
-            else if (op == 0)
-            {
-                //el bucle sigue infinitamente a menos de que elija la ocion 0 = salir
-                Console.WriteLine("Saliendo...");
-            }
-            else
-            {
-                //si se digita un valor numerico diferente al del menu seguira en el bucle
-                Console.WriteLine("Opcion no valida");
-            }
-        } while (op != 0);
+            } while (op != 0);
+        }
+        catch
+        {
+            Console.WriteLine("Se ha producido un error, no se pueden ingresar caracteres alfabeticos");
+        }
     }
 }

@@ -21,3 +21,10 @@ C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.Sugge
 C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.CoreCompileInputs.cache
 C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.exe
 C:\Users\Sena\source\repos\Prueba_Tecnica\obj\Debug\prueba técnica.pdb
+C:\Users\USER\Source\Repos\Prueba_Tecnica\bin\Debug\prueba técnica.exe.config
+C:\Users\USER\Source\Repos\Prueba_Tecnica\bin\Debug\prueba técnica.exe
+C:\Users\USER\Source\Repos\Prueba_Tecnica\bin\Debug\prueba técnica.pdb
+C:\Users\USER\Source\Repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.AssemblyReference.cache
+C:\Users\USER\Source\Repos\Prueba_Tecnica\obj\Debug\prueba técnica.csproj.CoreCompileInputs.cache
+C:\Users\USER\Source\Repos\Prueba_Tecnica\obj\Debug\prueba técnica.exe
+C:\Users\USER\Source\Repos\Prueba_Tecnica\obj\Debug\prueba técnica.pdb
